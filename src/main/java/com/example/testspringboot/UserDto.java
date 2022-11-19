@@ -1,7 +1,15 @@
 package com.example.testspringboot;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserDto {
 
@@ -35,7 +43,6 @@ public class UserDto {
         this.lastName = lastName;
     }
 
-
     public String getError() {
         return error;
     }
@@ -43,6 +50,5 @@ public class UserDto {
     public void setError(final String error) {
         this.error = error;
     }
-    
-}
 
+}
